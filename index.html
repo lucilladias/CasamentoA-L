@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosso Casamento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Nosso Casamento</h1>
+        <p>Estamos muito felizes em celebrar esse momento com vocês!</p>
+        
+        <h2>Detalhes do Evento</h2>
+        <p><strong>Data:</strong> 15 de Outubro de 2025</p>
+        <p><strong>Hora:</strong> 16h00</p>
+        <p><strong>Local:</strong> Espaço Jardim Encantado, São Paulo</p>
+        <p><strong>Traje:</strong> Passeio completo</p>
+        
+        <h2>Confirme sua Presença</h2>
+        <a href="https://forms.gle/sua-url-aqui" class="btn">Confirmar Presença</a>
+
+        <h2>Lista de Presentes</h2>
+        <div class="gift">
+            <img src="https://via.placeholder.com/150" alt="Jantar Romântico">
+            <h3>Jantar Romântico - R$ 100</h3>
+            <button class="btn" onclick="mostrarPagamento('Jantar Romântico', 100)">Contribuir</button>
+        </div>
+        
+        <div class="gift">
+            <img src="https://via.placeholder.com/150" alt="Passagem de Avião">
+            <h3>Passagem de Avião - R$ 300</h3>
+            <button class="btn" onclick="mostrarPagamento('Passagem de Avião', 300)">Contribuir</button>
+        </div>
+        
+        <div class="gift">
+            <img src="https://via.placeholder.com/150" alt="Noite de Hotel">
+            <h3>Noite de Hotel - R$ 200</h3>
+            <button class="btn" onclick="mostrarPagamento('Noite de Hotel', 200)">Contribuir</button>
+        </div>
+
+        <h2 id="mensagem"></h2>
+    </div>
+
+    <script>
+        function mostrarPagamento(presente, valor) {
+            let mensagem = `Para contribuir com "${presente}", faça um Pix para: seu-email@pix.com. Ou entre em contato para outras formas de pagamento.`;
+            document.getElementById("mensagem").innerText = mensagem;
+        }
+    </script>
+</body>
+</html>
