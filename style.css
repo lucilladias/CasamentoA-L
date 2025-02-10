@@ -1,0 +1,70 @@
+/* Definições gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #1E3A8A; /* Azul */
+}
+
+h3 {
+    color: #D64F3B; /* Terracota */
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.btn {
+    background-color: #1E3A8A; /* Azul */
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #0C2A5A; /* Azul mais escuro */
+}
+
+.gift {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 10px;
+    background-color: #F9F9F9;
+}
+
+.gift img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.gift h3 {
+    font-size: 18px;
+    color: #D64F3B; /* Terracota */
+}
+
+#mensagem {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
