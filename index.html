@@ -4,44 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nosso Casamento</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 0; padding: 0; }
+        .hero {
+            background: url('https://via.placeholder.com/1200x500') no-repeat center center/cover;
+            color: white;
+            padding: 100px 20px;
+        }
+        .container { max-width: 800px; margin: auto; padding: 20px; }
+        .details-container { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+        .details-text { flex: 1; text-align: left; padding-right: 20px; }
+        .details-image img { width: 100%; max-width: 300px; border-radius: 10px; }
+        .gift { border: 1px solid #ddd; padding: 15px; margin: 10px; border-radius: 10px; text-align: left; display: flex; align-items: center; }
+        .gift img { width: 100px; height: 100px; margin-right: 15px; border-radius: 10px; }
+        .btn { background: #4CAF50; color: white; padding: 10px; border: none; cursor: pointer; border-radius: 5px; }
+        iframe { width: 100%; height: 500px; border: none; }
+    </style>
 </head>
 <body>
-    <div class="container">
+    <div class="hero">
         <h1>Nosso Casamento</h1>
         <p>Estamos muito felizes em celebrar esse momento com vocês!</p>
-        
+    </div>
+    
+    <div class="container">
         <h2>Detalhes do Evento</h2>
-        <p><strong>Data:</strong> 21 de Setembro de 2025</p>
-        <p><strong>Hora:</strong> 16h00</p>
-        <p><strong>Local:</strong> Casa de Francisca, São Paulo</p>
-        <p><strong>Traje:</strong> Venha com uma roupa que voce goste!</p>
+        <div class="details-container">
+            <div class="details-text">
+                <p><strong>Data:</strong> 21 de Setembro de 2025</p>
+                <p><strong>Hora:</strong> 16h00</p>
+                <p><strong>Local:</strong> Casa de Francisca, São Paulo</p>
+                <p><strong>Traje:</strong> A roupa que voce gosta!</p>
+            </div>
+            <div class="details-image">
+                <img src="https://salon.io/casa-de-francisca/teste/1-casa-de-francisca-palco-foto-pedro-n-prata-jpg" alt="Foto do local do evento">
+            </div>
+        </div>
         
         <h2>Confirme sua Presença</h2>
-        <a href="https://forms.gle/sua-url-aqui" class="btn">Confirmar Presença</a>
-
+        <iframe src="https://docs.google.com/forms/d/e/SEU_FORMULARIO/viewform?embedded=true"></iframe>
+        
         <h2>Lista de Presentes</h2>
+        <p>Escolha um presente e contribua com o valor correspondente:</p>
+        
         <div class="gift">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ97hXPTQ2HEO51owbkyqWwOWMJW3yYRWsnIw&s" alt="Jantar Romântico">
-            <h3>Jantar Romântico - R$ 100</h3>
-            <button class="btn" onclick="mostrarPagamento('Jantar Romântico', 100)">Contribuir</button>
+            <img src="https://via.placeholder.com/150" alt="Jantar Romântico">
+            <div>
+                <h3>Jantar Romântico - R$ 100</h3>
+                <button class="btn" onclick="mostrarPagamento('Jantar Romântico', 100)">Contribuir</button>
+            </div>
         </div>
         
         <div class="gift">
             <img src="https://via.placeholder.com/150" alt="Passagem de Avião">
-            <h3>Passagem de Avião - R$ 300</h3>
-            <button class="btn" onclick="mostrarPagamento('Passagem de Avião', 300)">Contribuir</button>
+            <div>
+                <h3>Passagem de Avião - R$ 300</h3>
+                <button class="btn" onclick="mostrarPagamento('Passagem de Avião', 300)">Contribuir</button>
+            </div>
         </div>
         
         <div class="gift">
             <img src="https://via.placeholder.com/150" alt="Noite de Hotel">
-            <h3>Noite de Hotel - R$ 200</h3>
-            <button class="btn" onclick="mostrarPagamento('Noite de Hotel', 200)">Contribuir</button>
+            <div>
+                <h3>Noite de Hotel - R$ 200</h3>
+                <button class="btn" onclick="mostrarPagamento('Noite de Hotel', 200)">Contribuir</button>
+            </div>
         </div>
-
+        
         <h2 id="mensagem"></h2>
     </div>
-
+    
     <script>
         function mostrarPagamento(presente, valor) {
             let mensagem = `Para contribuir com "${presente}", faça um Pix para: seu-email@pix.com. Ou entre em contato para outras formas de pagamento.`;
