@@ -114,6 +114,24 @@
                 <h3>Lista de presentes na Amazon - boa opção para pagar no cartão</h3>
                 <a href="https://www.amazon.com.br/gp/help/customer/display.html?nodeId=GHCGC7B7SQ222YMD" class="btn">Ir para a lista</a>
             </div>
+            <div id="qrCodeContainer"></div>
+
+            <div class="Pix">
+                <script></script>
+                function gerarQRCode() {
+                    var chavePix = "seu-email@pix.com"; // Substitua pela sua chave Pix
+
+                    // Formato Pix Copia e Cola (sem valor fixo)
+                    var pixCopiaCola = `00020126580014BR.GOV.BCB.PIX0136${chavePix}5204000053039865802BR5920Nome Completo6009Cidade7008***6304ABCD`;
+
+                    // Exibir QR Code
+                    document.getElementById("qrCodeContainer").innerHTML = `<img src="${qrCodeUrl}" alt="QR Code Pix">`;
+                }
+
+                // Gera o QR Code assim que a página carregar
+                window.onload = gerarQRCode;
+                </script>
+
             <div class="gift">
                 <img src="https://via.placeholder.com/150" alt="Presente">
                 <h3>Jogo de panelas Tramontina para as marmitas saírem mais gostosas - R$ 100</h3>
