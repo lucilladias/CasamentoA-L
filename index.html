@@ -6,82 +6,118 @@
     <title>Casamento Aline & Lucilla</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;600&display=swap" rel="stylesheet">
     <style>
-   body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #FFEB99; /* Brighter Yellow */
-    color: #333;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #FFEB99; /* Brighter Yellow */
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
 
-header {
-    background: linear-gradient(135deg, #7FB3D5, #66D1D4); /* Modern Gradient */
-    color: white;
-    padding: 30px;
-    font-family: 'Playfair Display', serif;
-    font-size: 32px;
-    font-weight: bold;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
+        header {
+            background: linear-gradient(135deg, #7FB3D5, #66D1D4); /* Modern Gradient */
+            color: white;
+            padding: 30px;
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: bold;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
 
-.container {
-    max-width: 900px;
-    margin: auto;
-    padding: 30px;
-}
+        .container {
+            max-width: 1100px; /* Increased width */
+            margin: auto;
+            padding: 50px; /* Increased padding for more space */
+        }
 
-.section {
-    background: white;
-    padding: 25px;
-    margin: 40px 0;
-    border-radius: 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    color: #333;
-}
+        .section {
+            background: white;
+            padding: 40px; /* Increased padding for larger sections */
+            margin: 30px 0; /* More margin for better spacing */
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            color: #333;
+        }
 
-h2 {
-    color: #E58B8B; /* Brighter Salmon */
-    font-family: 'Playfair Display', serif;
-    font-size: 28px;
-    margin-bottom: 15px;
-}
+        h2 {
+            color: #E58B8B; /* Brighter Salmon */
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
 
-.btn {
-    background: #7FB3D5; /* Light Blue */
-    color: white;
-    padding: 12px 24px;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 50px;
-    margin-top: 10px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
-    border: none;
-    cursor: pointer;
-}
+        .btn {
+            background: #7FB3D5; /* Light Blue */
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 50px;
+            margin-top: 10px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+            border: none;
+            cursor: pointer;
+        }
 
-.btn:hover {
-    background: #66D1D4; /* Bright Aqua */
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
+        .btn:hover {
+            background: #66D1D4; /* Bright Aqua */
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
 
-.gift img {
-    width: 120px;
-    border-radius: 15px;
-    border: 4px solid #E58B8B; /* Bright Salmon */
-    transition: transform 0.3s ease;
-}
+        .gift img {
+            width: 120px;
+            border-radius: 15px;
+            border: 4px solid #E58B8B; /* Bright Salmon */
+            transition: transform 0.3s ease;
+        }
 
-.gift img:hover {
-    transform: scale(1.05);
-}
+        .gift img:hover {
+            transform: scale(1.05);
+        }
 
+        /* COMO CHEGAR SECTION */
+        .como-chegar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+            padding: 40px;
+        }
 
+        .como-chegar .info {
+            flex: 1;
+            max-width: 50%;
+        }
+
+        .como-chegar .mapa-container {
+            flex: 1;
+            max-width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .como-chegar iframe {
+            width: 100%;
+            height: 300px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .como-chegar img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
     </style>
 </head>
 <body>
@@ -99,6 +135,24 @@ h2 {
             <p><strong>Local:</strong> Casa de Francisca, São Paulo</p>
             <p><strong>Traje:</strong> Casual. Venha como se sentir bem. Não precisa usar vestido longo ou social completo.</p>
         </div>
+        
+        <section class="section como-chegar">
+            <div class="info">
+                <h2>Como Chegar</h2>
+                <p><strong>Endereço:</strong> Espaço Jardim Encantado, Rua das Flores, 123, São Paulo</p>
+                <p><strong>Metrô:</strong> Estação Jardim Azul (Linha 3 - Vermelha), a 10 minutos a pé</p>
+                <p><strong>Uber:</strong> Basta colocar "Espaço Jardim Encantado" no destino</p>
+                <p><strong>Estacionamento:</strong> Há um estacionamento privado no local</p>
+            </div>
+            <div class="mapa-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.4824539738283!2d-46.6503213237437!3d-23.588188778780045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c30e66f7d5%3A0xa2b17a4d9d24b!2sPra%C3%A7a%20da%20Liberdade%20-%20Liberdade%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1sen!2sbr!4v1707747619242!5m2!1sen!2sbr"
+                    allowfullscreen="" loading="lazy">
+                </iframe>
+                <img src="https://via.placeholder.com/400" alt="Foto do Espaço Jardim Encantado">
+            </div>
+        </section>        
+
         <div class="section">
             <h2>Quem casa quer casa</h2>
             <p>O mais importante é a sua presença. Mas se quiser contribuir com o nosso cantinho, colocamos algumas sugestões abaixo.</p>
