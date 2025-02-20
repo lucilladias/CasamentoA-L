@@ -166,7 +166,9 @@
             </div>
             <div id="qrCodeContainer"></div>
 
-            <div class="section">
+            <div class="gift">
+                <button class="btn" onclick="mostrarPix()">Exibir Chave Pix</button>
+                <p id="pixChave" style="display: none;">seu-email@pix.com</p>
                 <script>
                 function gerarQRCode() {
                     var chavePix = "seu-email@pix.com"; // Substitua pela sua chave Pix
