@@ -145,7 +145,7 @@
             position: absolute;
             width: 100%;
             height: 100%;
-            opacity: 0; /* Todas as imagens invisíveis */
+            opacity: 0;
             transition: opacity 0.5s ease-in-out;
         }
 
@@ -155,9 +155,10 @@
             object-fit: cover;
         }
 
-        /* 🔥 Garante que a primeira imagem seja visível */
+        /* ✅ A primeira imagem será visível por padrão */
         .slide.active {
             opacity: 1;
+            z-index: 1;
         }
 
         /* Botões de navegação */
@@ -179,11 +180,12 @@
     </style>
 
     <script>
+        
         let index = 0;
         const slides = document.querySelectorAll(".slide");
 
         function mostrarSlide(novoIndex) {
-            slides[index].classList.remove("active"); // Remove visibilidade do slide atual
+            slides.forEach(slide => slide.classList.remove("active")); // Remove todas as classes "active"
             index = (novoIndex + slides.length) % slides.length; // Garante um loop infinito
             slides[index].classList.add("active"); // Ativa o novo slide
         }
@@ -194,8 +196,9 @@
 
         // ✅ Garante que a primeira imagem já apareça ao carregar
         document.addEventListener("DOMContentLoaded", () => {
-            slides[0].classList.add("active");
+            mostrarSlide(0);
         });
+
     </script>
 
 </head>
