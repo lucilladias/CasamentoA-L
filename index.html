@@ -129,10 +129,10 @@
 
         .carousel-container {
             position: relative;
-            width: 800px; /* Definindo um tamanho fixo */
+            width: 800px;
             height: 400px;
             margin: auto;
-            overflow: hidden;
+            overflow: hidden;   
         }
 
         .carousel {
@@ -145,7 +145,7 @@
             position: absolute;
             width: 100%;
             height: 100%;
-            opacity: 0; /* Esconde todas as imagens */
+            opacity: 0; /* Todas as imagens invisíveis */
             transition: opacity 0.5s ease-in-out;
         }
 
@@ -155,10 +155,12 @@
             object-fit: cover;
         }
 
+        /* 🔥 Garante que a primeira imagem seja visível */
         .slide.active {
-            opacity: 1; /* Apenas a imagem ativa será visível */
+            opacity: 1;
         }
 
+        /* Botões de navegação */
         .prev, .next {
             position: absolute;
             top: 50%;
@@ -181,8 +183,8 @@
         const slides = document.querySelectorAll(".slide");
 
         function mostrarSlide(novoIndex) {
-            slides[index].classList.remove("active"); // Remove a visibilidade do slide atual
-            index = (novoIndex + slides.length) % slides.length; // Garante que o índice seja válido
+            slides[index].classList.remove("active"); // Remove visibilidade do slide atual
+            index = (novoIndex + slides.length) % slides.length; // Garante um loop infinito
             slides[index].classList.add("active"); // Ativa o novo slide
         }
 
@@ -190,7 +192,7 @@
             mostrarSlide(index + direction);
         }
 
-        // Garante que o primeiro slide seja visível ao carregar a página
+        // ✅ Garante que a primeira imagem já apareça ao carregar
         document.addEventListener("DOMContentLoaded", () => {
             slides[0].classList.add("active");
         });
