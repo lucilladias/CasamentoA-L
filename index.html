@@ -127,66 +127,62 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
-        <div class="carousel-container">
-    <div class="carousel">
-        <img src="https://via.placeholder.com/800x400/ff7f7f/333333?text=Foto+1" alt="Foto 1">
-        <img src="https://via.placeholder.com/800x400/77ff77/333333?text=Foto+2" alt="Foto 2">
-        <img src="https://via.placeholder.com/800x400/7777ff/333333?text=Foto+3" alt="Foto 3">
-    </div>
-    <button class="prev" onclick="mudarSlide(-1)">&#10094;</button>
-    <button class="next" onclick="mudarSlide(1)">&#10095;</button>
-</div>
+        .carousel-container {
+            position: relative;
+            max-width: 800px;
+            margin: auto;
+            overflow: hidden; /* Esconde imagens extras */
+        }
 
-<style>
-    .carousel-container {
-        position: relative;
-        max-width: 800px;
-        margin: auto;
-        overflow: hidden;
-    }
-    
-    .carousel {
-        display: flex;
-        transition: transform 0.5s ease-in-out;
-    }
+        .carousel {
+            display: flex;
+            width: 300%; /* 3 imagens lado a lado */
+            transition: transform 0.5s ease-in-out;
+        }
 
-    .carousel img { 
-        width: 100%;
-        max-height: 400px; 
-        object-fit: cover;
-    }
+        .slide {
+            width: 100%;
+            flex: 0 0 100%;
+        }
 
-    .prev, .next {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: rgba(0,0,0,0.5);
-        color: white;
-        border: none;
-        padding: 10px;
-        cursor: pointer;
-    }
+        .carousel img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+        }
 
-    .prev { left: 10px; }
-    .next { right: 10px; }
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .prev { left: 10px; }
+        .next { right: 10px; }
+
     </style>
 
     <script>
-    let index = 0;
+        let index = 0;
 
-    function mudarSlide(direction) {
-        const slides = document.querySelector(".carousel");
-        const totalSlides = slides.children.length;
+        function mudarSlide(direction) {
+            const slides = document.querySelector(".carousel");
+            const totalSlides = slides.children.length;
 
-        index += direction;
-        if (index < 0) index = totalSlides - 1;
-        if (index >= totalSlides) index = 0;
+            index += direction;
+            if (index < 0) index = totalSlides - 1;
+            if (index >= totalSlides) index = 0;
 
-        slides.style.transform = `translateX(-${index * 100}%)`;
+            slides.style.transform = `translateX(-${index * 100}%)`;
         }
+    </script>
 
-</script>
-    </style>
 </head>
 <body>
     <header>CASAMENTO ALINE & LUCILLA</header>
@@ -209,17 +205,15 @@
                 <br>A Casa fica no lindo, histórico e tombado Palacete Teresa ("a esquina musical de São Paulo" - saiba mais <a target="_blank" href="https://saopauloantiga.com.br/palacete-tereza-toledo-lara/">aqui</a>). 
                 <br>Quando chegar no Palacete Teresa, suba um lance de escadas para chegar no salão do 1º andar, onde será a festa.
                
-            <!-- Adicionando o Carrossel Aqui -->
-            <h2>Galeria de Fotos</h2>
-            <div class="carousel-container">
-                <div class="carousel">
-                    <img src="https://d1vq4hxutb7n2b.cloudfront.net/system/files/610ad6/35342b82837700002a/h_1024,dpr_2/Casa_de_Francisca_fachada_noite.jpg" alt="Palacete Teresa">
-                    <img src="https://d1vq4hxutb7n2b.cloudfront.net/system/files/610ad4/d9342b82c814000c43/h_1024,dpr_2/4_Casa_de_Francisca_-_palco_-_divulgacao.jpg" alt="Palco">
-                    <img src="https://d1vq4hxutb7n2b.cloudfront.net/system/files/610ad6/69342b822df7000004/h_1024,dpr_2/Casa_de_Francisca_-_salao_-_foto_Pedro_N_Prata.jpg" alt="Salao">
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <div class="slide"><img src="https://d1vq4hxutb7n2b.cloudfront.net/system/files/610ad6/35342b82837700002a/h_1024,dpr_2/Casa_de_Francisca_fachada_noite.jpg" alt="Palacete Teresa"></div>
+                        <div class="slide"><img src="https://d1vq4hxutb7n2b.cloudfront.net/system/files/610ad4/d9342b82c814000c43/h_1024,dpr_2/4_Casa_de_Francisca_-_palco_-_divulgacao.jpg" alt="Palco"></div>
+                        <div class="slide"><img src="https://d1vq4hxutb7n2b.cloudfront.net/system/files/610ad6/69342b822df7000004/h_1024,dpr_2/Casa_de_Francisca_-_salao_-_foto_Pedro_N_Prata.jpg" alt="Salao"></div>
+                    </div>
+                    <button class="prev" onclick="mudarSlide(-1)">&#10094;</button>
+                    <button class="next" onclick="mudarSlide(1)">&#10095;</button>
                 </div>
-                <button class="prev" onclick="mudarSlide(-1)">&#10094;</button>
-                <button class="next" onclick="mudarSlide(1)">&#10095;</button>
-                    </p>
         </div>
 
         <div class="section">
@@ -259,7 +253,8 @@
                     src="https://www.google.com/maps/embed/v1/place?q=casa+de+francisca&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
                     width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
-            </div>   
+            </div>
+        </div>
         </section>        
 
         <div class="section">
