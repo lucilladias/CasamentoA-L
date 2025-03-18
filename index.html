@@ -131,13 +131,14 @@
             position: relative;
             max-width: 800px;
             margin: auto;
-            overflow: hidden; /* Esconde imagens extras */
+            overflow: hidden; /* Esconde as imagens extras */
         }
 
         .carousel {
             display: flex;
             width: 300%; /* 3 imagens lado a lado */
             transition: transform 0.5s ease-in-out;
+            transform: translateX(0); /* Garante que a primeira imagem apareça */
         }
 
         .slide {
@@ -181,6 +182,11 @@
 
             slides.style.transform = `translateX(-${index * 100}%)`;
         }
+
+        // Garante que a primeira imagem apareça ao carregar a página
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelector(".carousel").style.transform = "translateX(0)";
+        });
     </script>
 
 </head>
