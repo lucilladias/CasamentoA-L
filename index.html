@@ -179,29 +179,8 @@
 
     </style>
 
-    <script>
-        
-        let index = 0;
-        const slides = document.querySelectorAll(".slide");
-
-        function mostrarSlide(novoIndex) {
-            slides.forEach(slide => slide.classList.remove("active")); // Remove todas as classes "active"
-            index = (novoIndex + slides.length) % slides.length; // Garante um loop infinito
-            slides[index].classList.add("active"); // Ativa o novo slide
-        }
-
-        function mudarSlide(direction) {
-            mostrarSlide(index + direction);
-        }
-
-        // ✅ Garante que a primeira imagem já apareça ao carregar
-        document.addEventListener("DOMContentLoaded", () => {
-            mostrarSlide(0);
-        });
-
-    </script>
-
 </head>
+
 <body>
     <header>CASAMENTO ALINE & LUCILLA</header>
     <img src="images/foto-casal.jpg" alt="Imagem do Casal" width="300">
@@ -348,5 +327,28 @@
                     </div>
         </div>
     </div>
+
+    <script>
+        
+        let index = 0;
+        const slides = document.querySelectorAll(".slide");
+
+        function mostrarSlide(novoIndex) {
+            slides.forEach(slide => slide.classList.remove("active")); // Remove todas as classes "active"
+            index = (novoIndex + slides.length) % slides.length; // Garante um loop infinito
+            slides[index].classList.add("active"); // Ativa o novo slide
+        }
+
+        function mudarSlide(direction) {
+            mostrarSlide(index + direction);
+        }
+
+        // ✅ Garante que a primeira imagem já apareça ao carregar
+        document.addEventListener("DOMContentLoaded", () => {
+            mostrarSlide(0);
+        });
+
+    </script>
+
 </body>
 </html>
