@@ -126,6 +126,66 @@
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
+
+        <div class="carousel-container">
+    <div class="carousel">
+        <img src="https://via.placeholder.com/800x400/ff7f7f/333333?text=Foto+1" alt="Foto 1">
+        <img src="https://via.placeholder.com/800x400/77ff77/333333?text=Foto+2" alt="Foto 2">
+        <img src="https://via.placeholder.com/800x400/7777ff/333333?text=Foto+3" alt="Foto 3">
+    </div>
+    <button class="prev" onclick="mudarSlide(-1)">&#10094;</button>
+    <button class="next" onclick="mudarSlide(1)">&#10095;</button>
+</div>
+
+<style>
+    .carousel-container {
+        position: relative;
+        max-width: 800px;
+        margin: auto;
+        overflow: hidden;
+    }
+    
+    .carousel {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel img { 
+        width: 100%;
+        max-height: 400px; 
+        object-fit: cover;
+    }
+
+    .prev, .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0,0,0,0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .prev { left: 10px; }
+    .next { right: 10px; }
+    </style>
+
+    <script>
+    let index = 0;
+
+    function mudarSlide(direction) {
+        const slides = document.querySelector(".carousel");
+        const totalSlides = slides.children.length;
+
+        index += direction;
+        if (index < 0) index = totalSlides - 1;
+        if (index >= totalSlides) index = 0;
+
+        slides.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+</script>
     </style>
 </head>
 <body>
@@ -138,6 +198,7 @@
                 <br>Estamos muito felizes em compartilhar com vocês esse momento especial em que vamos passar de namoradas para esposas. 
                 <br>Vem com a gente? ♥</p>
         </div>
+
         <div class="section">
             <h2>DETALHES DO EVENTO</h2>
             <p><strong>Data:</strong> 21 de Setembro de 2025</p>
@@ -147,11 +208,27 @@
                 <br>A Casa de Francisca é um restaurante musical no centro histórico de São Paulo. 
                 <br>A Casa fica no lindo, histórico e tombado Palacete Teresa ("a esquina musical de São Paulo" - saiba mais <a target="_blank" href="https://saopauloantiga.com.br/palacete-tereza-toledo-lara/">aqui</a>). 
                 <br>Quando chegar no Palacete Teresa, suba um lance de escadas para chegar no salão do 1º andar, onde será a festa.
-            </p>
-            <p><strong>Traje:</strong> Venha como se sentir bem e confortável para dançar com a gente!
+               
+            <!-- Adicionando o Carrossel Aqui -->
+            <h2>Galeria de Fotos</h2>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <img src="https://d1vq4hxutb7n2b.cloudfront.net/system/files/610ad6/35342b82837700002a/h_1024,dpr_2/Casa_de_Francisca_fachada_noite.jpg" alt="Palacete Teresa">
+                    <img src="https://d1vq4hxutb7n2b.cloudfront.net/system/files/610ad4/d9342b82c814000c43/h_1024,dpr_2/4_Casa_de_Francisca_-_palco_-_divulgacao.jpg" alt="Palco">
+                    <img src="https://d1vq4hxutb7n2b.cloudfront.net/system/files/610ad6/69342b822df7000004/h_1024,dpr_2/Casa_de_Francisca_-_salao_-_foto_Pedro_N_Prata.jpg" alt="Salao">
+                </div>
+                <button class="prev" onclick="mudarSlide(-1)">&#10094;</button>
+                <button class="next" onclick="mudarSlide(1)">&#10095;</button>
+                    </p>
+        </div>
+
+        <div class="section">
+            <h2>TRAJE</h2>
+            
+            <p><strong>Venha como se sentir bem e confortável para dançar com a gente!</strong>
                 <br>Não é necessário usar vestido longo ou social completo. As opções do tipo esporte fino são boas sugestões. O importante mesmo é vir como se sentir bem!
-                <br>Para a segurança dos seus tornozelos e por conta dos lindos paralelepípedos e ladrilhos portugueses do centro de São Paulo, recomendamos evitar saltos finos.</p>
-            <img src="https://d1vq4hxutb7n2b.cloudfront.net/system/files/610ad6/35342b82837700002a/h_1024,dpr_2/Casa_de_Francisca_fachada_noite.jpg" alt="Palacete Teresa"><img src="https://images.adsttc.com/media/images/5cd4/73eb/284d/d1d2/2b00/0014/medium_jpg/19.jpg?1557427172" alt="Salão, Casa de Francisca">
+                <br>Para a segurança dos seus tornozelos e por conta dos lindos ladrilhos portugueses do centro de São Paulo, recomendamos evitar saltos finos.</p>
+            
         </div>
         
         <section class="section como-chegar">
