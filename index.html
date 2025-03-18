@@ -329,12 +329,14 @@
     </div>
 
     <script>
+    document.addEventListener("DOMContentLoaded", function () {
         let index = 0;
+        const slides = document.querySelectorAll(".slide");
+        const totalSlides = slides.length;
 
         function mostrarSlide(novoIndex) {
-            const slides = document.querySelectorAll(".slide"); // Captura os slides dentro da função
             slides.forEach(slide => slide.classList.remove("active")); 
-            index = (novoIndex + slides.length) % slides.length;
+            index = (novoIndex + totalSlides) % totalSlides;
             slides[index].classList.add("active");
         }
 
@@ -342,13 +344,18 @@
             mostrarSlide(index + direction);
         }
 
-        document.addEventListener("DOMContentLoaded", () => {
-            mostrarSlide(0);
-            
-            // Adiciona os eventos aos botões após o carregamento do DOM
-            document.querySelector(".prev").addEventListener("click", () => mudarSlide(-1));
-            document.querySelector(".next").addEventListener("click", () => mudarSlide(1));
+        // Inicializa o carrossel com a primeira imagem visível
+        mostrarSlide(0);
+
+        // Adiciona eventos aos botões depois que o DOM está carregado
+        document.querySelector(".prev").addEventListener("click", function () {
+            mudarSlide(-1);
         });
+
+        document.querySelector(".next").addEventListener("click", function () {
+            mudarSlide(1);
+        });
+    });
 
     </script>
 
