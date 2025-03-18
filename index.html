@@ -329,23 +329,25 @@
     </div>
 
     <script>
-        
         let index = 0;
-        const slides = document.querySelectorAll(".slide");
 
         function mostrarSlide(novoIndex) {
-            slides.forEach(slide => slide.classList.remove("active")); // Remove todas as classes "active"
-            index = (novoIndex + slides.length) % slides.length; // Garante um loop infinito
-            slides[index].classList.add("active"); // Ativa o novo slide
+            const slides = document.querySelectorAll(".slide"); // Captura os slides dentro da função
+            slides.forEach(slide => slide.classList.remove("active")); 
+            index = (novoIndex + slides.length) % slides.length;
+            slides[index].classList.add("active");
         }
 
         function mudarSlide(direction) {
             mostrarSlide(index + direction);
         }
 
-        // ✅ Garante que a primeira imagem já apareça ao carregar
         document.addEventListener("DOMContentLoaded", () => {
             mostrarSlide(0);
+            
+            // Adiciona os eventos aos botões após o carregamento do DOM
+            document.querySelector(".prev").addEventListener("click", () => mudarSlide(-1));
+            document.querySelector(".next").addEventListener("click", () => mudarSlide(1));
         });
 
     </script>
