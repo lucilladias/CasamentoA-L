@@ -94,7 +94,7 @@
         padding: 40px;
         }
 
-        /* Bloco de introdução - informação inicial e opções de chegada */
+        /* Bloco de introdução - informações gerais */
         .como-chegar > .info {
         max-width: 100%;
         margin-bottom: 40px;
@@ -105,22 +105,28 @@
         display: flex;
         flex-wrap: wrap;
         gap: 30px;
-        justify-content: space-between;
         }
 
-        /* Endereço (primeira coluna) */
+        /* Coluna de Endereço */
         .como-chegar .info-e-mapa .info {
         flex: 1;
-        max-width: 48%; /* Ajustando para que fiquem duas colunas lado a lado */
+        max-width: 48%; /* Ajusta para que fiquem lado a lado */
         }
 
-        /* Mapa (segunda coluna) */
+        /* Coluna de Mapa */
         .como-chegar .info-e-mapa .mapa-container {
         flex: 1;
-        max-width: 48%; /* Ajustando para que fiquem duas colunas lado a lado */
+        max-width: 48%; /* Ajusta para que fiquem lado a lado */
         display: flex;
         flex-direction: column;
         align-items: center;
+        }
+
+        /* Coluna de opções de transporte (metrô, carro, estacionamento) */
+        .como-chegar .info-opcoes {
+        flex-basis: 100%; /* Garante que ocupe toda a linha */
+        max-width: 100%; /* Para que ocupe 100% da largura */
+        margin-top: 20px;
         }
 
         /* Responsivo: Ajustar para uma coluna quando a tela for pequena */
@@ -131,6 +137,11 @@
 
         .como-chegar .info-e-mapa .info,
         .como-chegar .info-e-mapa .mapa-container {
+            max-width: 100%;
+        }
+
+        /* Garante que a coluna de opções de transporte também ocupe toda a largura */
+        .como-chegar .info-opcoes {
             max-width: 100%;
         }
         }
@@ -159,19 +170,7 @@
             <p><strong>Local:</strong> <b><a target="_blank" href="https://casadefrancisca.art.br/novo/">Casa de Francisca</a>, São Paulo / SP</b>
                 <br>A Casa de Francisca é um restaurante musical no centro histórico de São Paulo. 
                 <br>A Casa fica no lindo e tombado Palacete Teresa ("a esquina musical de São Paulo" - saiba mais <a target="_blank" href="https://saopauloantiga.com.br/palacete-tereza-toledo-lara/">aqui</a>). 
-                <br>Quando chegar no Palacete Teresa, suba um lance de escadas para chegar no salão do 1º andar, onde será a festa.
-                <img src="https://d1vq4hxutb7n2b.cloudfront.net/system/files/610ad6/35342b82837700002a/h_512,dpr_1.5/Casa_de_Francisca_fachada_noite.jpg" alt="Casa_de_Francisca_fachada_noite" width="300">
-        </div>
-
-        <div class="section">
-            <h2>TRAJE</h2>
-            
-            <p><strong>Venha como se sentir bem e confortável para dançar com a gente!</strong>
-                <br>
-                Não é necessário usar vestido longo ou social completo. As opções do tipo esporte fino são boas sugestões. O importante mesmo é vir como se sentir bem!
-                <br>
-                Para a segurança dos seus tornozelos e por conta dos ladrilhos portugueses do centro de São Paulo, recomendamos evitar saltos finos.</p>
-            
+                <br><img src="https://d1vq4hxutb7n2b.cloudfront.net/system/files/610ad6/35342b82837700002a/h_512,dpr_1.5/Casa_de_Francisca_fachada_noite.jpg" alt="Casa_de_Francisca_fachada_noite" width="500">
         </div>
         
         <section class="section como-chegar">
@@ -202,8 +201,10 @@
                   width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
               </div>
+            </div>
           
-              <!-- Opções de transporte -->
+            <!-- Opções de transporte (metrô, carro, estacionamento) -->
+            <div class="info-opcoes">
               <div class="info">
                 <p><strong>Metrô:</strong>
                   <br>A estação da Sé fica a 2 minutos a pé.
@@ -220,14 +221,20 @@
                 </p>
               </div>
             </div>
-          </section>                
-
+          </section>
+          
         <div class="section">
             <h2>CONFIRME SUA PRESENÇA</h2>
-            <p>Marque na agenda e confirme para a gente a sua presença assim que puder ♥
-               <br>Pode confirmar como preferir:
-               <br>- Nos mandando uma mensagem por WhatsApp ou
-               <br>- Respondendo a esse <a target="_blank" href="https://forms.gle/hiqtx1g86ukwgG4L7">formulário</a>.</p> 
+            <p>Marque na agenda e confirme para a gente a sua presença assim que puder para a gente fechar os números com o local do evento.
+            <br>Aguardamos sua mensagem de confirmação por WhatsApp ♥
+        </div>
+
+        <div class="section">
+            <h2>COM QUE ROUPA EU VOU PRA FESTA QUE VOCÊ CONVIDOU?</h2>
+            
+            <p><strong>Venha como se sentir bem e confortável para dançar com a gente!</strong>
+                <br><br>Não é necessário usar vestido longo ou social completo. As opções do tipo esporte fino são boas sugestões. O importante mesmo é vir como se sentir bem!
+                <br><br>Para a segurança dos seus tornozelos e por conta dos ladrilhos portugueses do centro de São Paulo, recomendamos evitar saltos finos.</p>            
         </div>
 
         <div class="section">
