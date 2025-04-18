@@ -91,50 +91,30 @@
 
         /* COMO CHEGAR SECTION */
         .como-chegar {
-            padding: 40px;
-        }
-
-        .como-chegar .info {
-            flex: 1;
-            max-width: 50%;
-        }
-
-        .como-chegar .mapa-container {
-            flex: 1;
-            max-width: 50%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .como-chegar iframe {
-            width: 100%;
-            height: 300px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-        }
-
-        .como-chegar img {
-            width: 100%;
-            max-width: 400px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .como-chegar.info-e-mapa {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
         padding: 40px;
         }
 
-        .info-e-mapa .info {
+        /* Bloco de introdução */
+        .como-chegar > .info {
+        max-width: 100%;
+        margin-bottom: 40px;
+        }
+
+        /* Parte dividida em duas colunas */
+        .como-chegar .info-e-mapa {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        }
+
+        /* Coluna com instruções (metrô, app, estacionamento) */
+        .como-chegar .info-e-mapa .info {
         flex: 1;
         max-width: 50%;
         }
 
-        .info-e-mapa .mapa-container {
+        /* Coluna com o mapa */
+        .como-chegar .info-e-mapa .mapa-container {
         flex: 1;
         max-width: 50%;
         display: flex;
@@ -142,17 +122,35 @@
         align-items: center;
         }
 
-        /* Responsivo (opcional, mas recomendado!) */
+        /* Estilos do mapa */
+        .como-chegar iframe {
+        width: 100%;
+        height: 300px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        margin-bottom: 20px;
+        }
+
+        /* Imagens (caso tenha) */
+        .como-chegar img {
+        width: 100%;
+        max-width: 400px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Responsivo */
         @media (max-width: 768px) {
-        .info-e-mapa {
+        .como-chegar .info-e-mapa {
             flex-direction: column;
         }
 
-        .info-e-mapa .info,
-        .info-e-mapa .mapa-container {
+        .como-chegar .info-e-mapa .info,
+        .como-chegar .info-e-mapa .mapa-container {
             max-width: 100%;
         }
         }
+
     </style>
 
 </head>
