@@ -57,6 +57,7 @@
             margin-bottom: 15px;
         }
 
+        /*SEÇAO DE PRESENTES*/
         .btn {
             background: #7FB3D5; /* Light Blue */
             color: white;
@@ -76,17 +77,6 @@
             background: #66D1D4; /* Bright Aqua */
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-
-        .gift img {
-            width: 120px;
-            border-radius: 15px;
-            border: 4px solid #E58B8B; /* Bright Salmon */
-            transition: transform 0.3s ease;
-        }
-
-        .gift img:hover {
-            transform: scale(1.05);
         }
 
         /* COMO CHEGAR SECTION */
@@ -171,12 +161,12 @@
             <h2>DETALHES DO EVENTO</h2>
             <p><strong>Data:</strong> 21 de Setembro de 2025</p>
             <p><strong>Horário:</strong> das 12h00 às 18h00</p>
-            <p><strong>Olha só um incentivo para chegar no horário:</strong> Vamos começar o dia com a cerimônia ♥ </p>
-            <p><strong>Dica importante:</strong> O almoço será servido só depois da cerimônia, então tome um café-da-manhã bem reforçado</p>
+            <p><strong>Olha só um incentivo para chegar no horário:</strong> Vamos começar o dia com a cerimônia! ♥ </p>
+            <p><strong>Dica importante:</strong> O almoço será servido só depois da cerimônia, então tome um café-da-manhã bem reforçado.</p>
             <p><strong>Local:</strong> <a target="_blank" href="https://casadefrancisca.art.br/novo/">Casa de Francisca</a>, São Paulo / SP
                 <br>A Casa de Francisca é um restaurante musical no centro histórico de São Paulo. 
-                <br>A Casa fica no lindo e tombado Palacete Teresa ("a esquina musical de São Paulo" - saiba mais <a target="_blank" href="https://saopauloantiga.com.br/palacete-tereza-toledo-lara/">aqui</a>). 
-                <br><img src="https://d1vq4hxutb7n2b.cloudfront.net/system/files/610ad6/35342b82837700002a/h_512,dpr_1.5/Casa_de_Francisca_fachada_noite.jpg" alt="Casa_de_Francisca_fachada_noite" width="800">
+                <br>A Casa fica no lindo e tombado Palacete Teresa ("a esquina musical de São Paulo" - saiba mais <a target="_blank" href="https://saopauloantiga.com.br/palacete-tereza-toledo-lara/">aqui</a>)</p>. 
+            <p><img src="https://d1vq4hxutb7n2b.cloudfront.net/system/files/610ad6/35342b82837700002a/h_512,dpr_1.5/Casa_de_Francisca_fachada_noite.jpg" alt="Casa_de_Francisca_fachada_noite" width="800"></p>
         </div>
         
         <section class="section como-chegar">
@@ -213,8 +203,8 @@
             <div class="info-opcoes">
               <div class="info">
                 <p><strong>Metrô:</strong>
-                  <br>A estação da Sé fica a 2 minutos a pé.
-                  <br>São Bento e Anhangabaú também estão próximas.
+                  <br>A estação da <b>Sé</b> fica a 2 minutos a pé.
+                  <br><b>São Bento</b> e <b>Anhangabaú</b> também estão próximas.
                 </p>
                 <p><strong>Carro de aplicativo:</strong>
                   <br>Peça o carro para a <b>Rua Benjamin Constant, 84</b> ou <b>Rua Benjamin Constant, 114</b>.
@@ -231,12 +221,12 @@
           
         <div class="section">
             <h2>CONFIRME SUA PRESENÇA</h2>
-            <p>Marque na agenda e confirme para a gente a sua presença assim que puder para a gente fechar os números com o local do evento.
-            <br>Aguardamos sua mensagem de confirmação por WhatsApp ♥
+            <p>Marque na agenda e confirme a sua presença assim que puder para fecharmos os números com o local do evento.
+            <br>Aguardamos sua mensagem de confirmação por WhatsApp!
         </div>
 
         <div class="section">
-            <h2>COM QUE ROUPA EU VOU PRA FESTA QUE VOCÊ CONVIDOU?</h2>
+            <h2>COM QUE ROUPA EU VOU PRA FESTA QUE VOCÊ ME CONVIDOU?</h2>
             
             <p><strong>Venha como se sentir bem e confortável para dançar com a gente!</strong>
                 <br>Para a segurança dos seus tornozelos e por conta dos ladrilhos portugueses do centro de São Paulo, recomendamos evitar saltos finos.
@@ -247,66 +237,10 @@
         <div class="section">
             <h2>QUEM CASA... QUER CASA!</h2>
             <p>O mais importante é a sua presença. Mas se quiser contribuir com o nosso cantinho, colocamos algumas sugestões abaixo.</p>
-            <p><i>Sugerimos usar a <b>lista da Amazon</b> para pagar no cartão e <b>com a lista a seguir</b> para fazer um Pix</i></p>
+            <p><i>Sugerimos fazer um Pix ou, se preferir usar outro modo de pagamento, usar a <b>lista da Amazon</b>.</i></p>
 
-                <h3>Lista de presentes na Amazon - boa opção para pagar no cartão</h3>
-                <a href="https://www.amazon.com.br/gp/help/customer/display.html?nodeId=GHCGC7B7SQ222YMD" class="btn">Ir para a lista</a>
-            
-                <div id="qrCodeContainer"></div>
-
-                <div class="gift">
-                    <img src="https://assets.tramontina.com.br/upload/tramon/imagens/FAR/65140000PRM002G.jpg" alt="Presente">
-                    <h3>Jogo de panelas Tramontina Inox para garantir marmitas de qualidade para a vida toda - R$ 1.100</h3>
-                    <button class="btn" onclick="mostrarPix()">Exibir Chave Pix</button>
-                    <p id="pixChave" style.display = "block";">seu-email@pix.com</p>
-                    
-                    <script>
-                        function mostrarPix() {
-                            document.getElementById("pixChave").style.display = "block";
-                        }
-                    </script>        
-                <a href="#" class="btn" onclick>Contribuir com pix</a>
-                    </div>
-                    
-                    <div class="gift">
-                        <img src="https://images.tcdn.com.br/img/img_prod/1073058/tinta_suvinil_toque_de_luz_18_litros_branco_3540_2_fc8c87f5b47d3c658edd277650e9bf6b.jpg" alt="Presente">
-                        <h3>Latas de tinta colorida para alegrar a futura casa - R$ 300</h3>
-                        <a href="#" class="btn">Contribuir</a>
-                    </div>
-
-                    <div class="gift">
-                        <img src="https://via.placeholder.com/150" alt="Presente">
-                        <h3>Mondolina para os legumitos! - R$ 150</h3>
-                        <a href="#" class="btn">Contribuir</a>
-                    </div>
-
-                    <div class="gift">
-                        <img src="https://www.ikea.com/gb/en/images/products/hektar-floor-lamp-with-3-spot-brown-red__1284199_pe932795_s5.jpg?f=m" alt="Presente">
-                        <h3>Luminárias para ajudar a gente a ler sem aumentar o grau de miopia - R$ 500</h3>
-                        <a href="#" class="btn">Contribuir</a>
-                    </div>
-
-                    <div class="gift">
-                        <img src="https://electrolux.vtexassets.com/arquivos/ids/197807-800-800?v=637099623948400000&width=800&height=800&aspect=true" alt="Presente">
-                        <h3>"Livre estou, livre estou" de descongelar geladeira com essa frost free! - R$ 2.500</h3>
-                        <a href="#" class="btn">Contribuir</a>
-                    </div>
-
-                    <div class="gift">
-                        <img src="https://via.placeholder.com/150" alt="Presente">
-                        <h3>Lençol 180 fios, bem princesinhas - R$ 300</h3>
-                        <a href="#" class="btn">Contribuir</a>
-                    </div>
-                    <div class="gift">
-                        <img src="https://via.placeholder.com/150" alt="Presente">
-                        <h3>Estante de livros para alocar a biblioteca em formação - R$ 300</h3>
-                        <a href="#" class="btn">Contribuir</a>
-                    </div>
-                    <div class="gift">
-                        <img src="https://via.placeholder.com/150" alt="Presente">
-                        <h3>Chaleira elétrica para cultivar um hábito inglês que pegamos - R$ 300</h3>
-                        <a href="#" class="btn">Contribuir</a>
-                    </div>
+            <h3>Chave Pix:</h3> dizer qual é    
+            <h3>Amazon</h3><a target="_blank" href="https://www.amazon.com.br/gp/help/customer/display.html?nodeId=GHCGC7B7SQ222YMD">Lista de presentes na Amazon</a>, boa opção para pagar no cartão     
         </div>
     </div>
 
